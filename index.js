@@ -41,6 +41,10 @@
             setEventListener(mediaConnection);
         });
 
+        peer.on('close', () => {
+            alert('通信が切断しました。');
+        });
+
     }
     catch(error){
         alert(error)
